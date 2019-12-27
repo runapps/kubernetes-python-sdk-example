@@ -1,0 +1,21 @@
+{
+    "sample-deployment":{
+        "namespace": "default",
+        "deployment_name":"sample-deployment",
+        "image":"nginx:latest",
+        "replicas":2,
+        "publish_ports":[
+            { "name":"http","port":"80" }
+        ],
+        "env_vars":[
+            { "name":"ALICEK106_IN_LOVE", "value":"yes" }
+        ],
+        "resources":{
+            "request": { "cpu":"100m", "memory":"200Mi" },
+            "limit": { "cpu":"100m", "memory":"200Mi" }
+        },
+        "labels":{
+            "my_custom_label": "ls"
+        }
+    }
+}
